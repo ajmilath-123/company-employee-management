@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     <h2>Company Details</h2>
-
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">{{ $company->name }}</h5>
@@ -20,7 +19,6 @@
                     N/A
                 @endif
             </p>
-
             <a href="{{ route('companies.index') }}" class="btn btn-secondary">Back</a>
             <a href="{{ route('companies.edit', $company->id) }}" class="btn btn-primary">Edit</a>
         </div>

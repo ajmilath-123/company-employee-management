@@ -2,8 +2,11 @@
 
 @section('content')
 <div class="container">
-    <h2>Create Company</h2>
-
+    <div class="container mb-3 d-flex justify-content-between align-items-center">
+        <h2>Create Company</h2>
+        <a href="{{ route('companies.index') }}" class="btn btn-success btn-sm">Back to Companies</a>
+    </div>
+    
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

@@ -19,23 +19,20 @@
 </head>
 <body>
     <div id="app">
-
-         <x-navbar>
+        <x-navbar>
         <x-slot name="leftLinks">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="companiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('companies.index') }}" id="" aria-expanded="false">
                     Companies
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="companiesDropdown">
-                    <li><a class="dropdown-item" href="{{ route('companies.index') }}">List Companies</a></li>
-                    <li><a class="dropdown-item" href="{{ route('companies.create') }}">Create Company</a></li>
-                </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="">Employees</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('employees.index') }}" aria-expanded="false">
+                    Employees
+                </a>
+            </li>
         </x-slot>
     </x-navbar>
-       
-
         <main class="py-4">
             @yield('content')
         </main>

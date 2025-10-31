@@ -46,7 +46,7 @@ class CompanyController extends Controller
 
         if ($request->hasFile('logo')) {
             $path         = $request->file('logo')->store('logos', 'public');
-            $data['logo'] = $path; // <-- assign to $data, not $validated
+            $data['logo'] = $path;
         }
 
         Company::create($data);
