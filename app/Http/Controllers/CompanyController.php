@@ -21,7 +21,7 @@ class CompanyController extends Controller
                 ->addColumn('actions', function ($company) {
                     return view('components.partials.actions', ['model' => $company])->render();
                 })
-                ->rawColumns(['actions', 'logo']) // render HTML
+                ->rawColumns(['actions', 'logo']) 
                 ->make(true);
 
         }

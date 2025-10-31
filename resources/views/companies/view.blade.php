@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
     <h2>Company Details</h2>
     <div class="card">
         <div class="card-body">
@@ -23,5 +22,4 @@
             <a href="{{ route('companies.edit', $company->id) }}" class="btn btn-primary">Edit</a>
         </div>
     </div>
-</div>
 @endsection

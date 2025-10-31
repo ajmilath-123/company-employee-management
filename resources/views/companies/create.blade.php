@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
     <div class="container mb-3 d-flex justify-content-between align-items-center">
         <h2>Create Company</h2>
         <a href="{{ route('companies.index') }}" class="btn btn-success btn-sm">Back to Companies</a>
@@ -42,5 +41,4 @@
 
         <button type="submit" class="btn btn-primary">Create Company</button>
     </form>
-</div>
 @endsection

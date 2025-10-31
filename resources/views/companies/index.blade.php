@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-<div class="container">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Companies</h2>
         <a href="{{ route('companies.create') }}" class="btn btn-success">Add New Company</a>
@@ -39,7 +38,6 @@
             </tr>
         </thead>
     </table>
-</div>
 @endsection
 
 @section('script')

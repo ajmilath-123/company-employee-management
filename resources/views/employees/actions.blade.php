@@ -1,5 +1,3 @@
-{{-- resources/views/partials/actions.blade.php --}}
-
 <a href="{{ route('employees.show', $model->id) }}" class="btn btn-sm btn-info">View</a>
 <a href="{{ route('employees.edit', $model->id) }}" class="btn btn-sm btn-warning">Edit</a>
 

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
     <div class="container mb-3 d-flex justify-content-between align-items-center">
     <h2>Add Employee</h2>
         <a href="{{ route('employees.index') }}" class="btn btn-success">Employees List</a>
@@ -52,5 +51,4 @@
         <button type="submit" class="btn btn-primary">Save Employee</button>
         <a href="{{ route('employees.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
-</div>
 @endsection

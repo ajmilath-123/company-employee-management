@@ -17,5 +17,6 @@
         Route::post('/employees', [EmployeeController::class, 'store']);
         Route::get('/employees/{id}', [EmployeeController::class, 'show']);
         Route::put('/employees/{employee}', [EmployeeController::class, 'update']);
-        Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy']);  
+        Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy']); 
+        Route::post('/logout', [AuthenticationController::class, 'logout']); 
 });

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
     <h2>Edit Company</h2>
 
     <form action="{{ route('companies.update', $company->id) }}" method="POST" enctype="multipart/form-data">
@@ -35,7 +34,6 @@
         <button type="submit" class="btn btn-primary">Update Company</button>
         <a href="{{ route('companies.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
-</div>
 @endsection
 
 @section('script')

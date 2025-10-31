@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
     <form action="{{ route('employees.update', $employee->id) }}" method="POST">
         @csrf
         @method('PUT')
@@ -34,5 +33,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Update Employee</button>
     </form>
-</div>
 @endsection
