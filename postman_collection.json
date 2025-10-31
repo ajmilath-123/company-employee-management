@@ -1,0 +1,395 @@
+{
+    "info": {
+        "name": "Laravel Company & Employee API",
+        "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+        "description": "API documentation for Companies and Employees with authentication.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"admin@admin.com\",\n    \"password\": \"password\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/login",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "login"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/logout",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "logout"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Companies",
+            "item": [
+                {
+                    "name": "List Companies",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/companies",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "companies"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Show Company",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/companies/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "companies",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Company",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "New Company Name",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "newemail@example.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "website",
+                                    "value": "https://newwebsite.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/companies/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "companies",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Store Company",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "New Company",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "company@example.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "website",
+                                    "value": "https://example.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/companies",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "companies"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Company",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/companies/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "companies",
+                                ":id"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+
+        {
+            "name": "Employees",
+            "item": [
+                {
+                    "name": "List Employees",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/employees",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "employees"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Employee",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"company_id\": 1,\n    \"email\": \"john@example.com\",\n    \"phone\": \"1234567890\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/employees",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "employees"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Employee",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "first_name",
+                                    "value": "John",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "last_name",
+                                    "value": "Doe",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "john.doe@example.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "1234567890",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/employees/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "employees",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Employee",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/employees/{{employee_id}}",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "employees",
+                                "{{employee_id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "token",
+            "value": ""
+        }
+    ]
+}
